@@ -1,15 +1,24 @@
 import re
 
 
+def process_invoice_text(invoice_text: str) -> dict:
+    data = parse_invoice(invoice_text)
+
+    print("Wyodrębnione dane:")
+    print(data)
+    print("-" * 40)
+
+    return data
+
+
 def find_first(patterns, text):
     for pattern in patterns:
         match = re.search(pattern, text, re.IGNORECASE)
         if match:
             return match.group(1).strip()
     return ""
-
-
 def parse_invoice(text: str) -> dict:
+
     invoice_number = find_first([
         r"Faktura\s*(?:VAT)?\s*nr[:\s]*([A-Z0-9/\-]+)"
     ], text)
