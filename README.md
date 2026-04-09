@@ -14,4 +14,12 @@ Program przetwarza pliki z folderu `samples`, wyciąga tekst z PDF, a następnie
   - data wystawienia
   - kwota do zapłaty
 
-## Struktura projektu
+## Wymagania
+
+- Python 3.14+
+- biblioteki używane przez projekt zgodnie z plikiem `requirements.py` lub konfiguracją środowiska
+
+## Instalacja
+
+
+
