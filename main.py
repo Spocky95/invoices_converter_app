@@ -10,7 +10,7 @@ def main():
         print(f"Błąd: Katalog '{samples_dir}' nie istnieje.")
         return
 
-    for file_path in samples_dir.glob("*.pdf"):
+    for file_path in samples_dir.rglob("*.pdf"):
         print(f"--- ANALIZA PLIKU: {file_path.name} ---")
 
         if is_pdf_text_based(str(file_path)):
